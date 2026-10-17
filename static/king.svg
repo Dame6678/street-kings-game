@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Animated Street King character, based on original portrait">
+<defs>
+ <linearGradient id="armor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#20180a"/><stop offset="0.55" stop-color="#765116"/><stop offset="1" stop-color="#0c0c0e"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8a5310"/><stop offset=".5" stop-color="#ffe68e"/><stop offset="1" stop-color="#a66b17"/></linearGradient>
+ <clipPath id="face"><ellipse cx="200" cy="188" rx="96" ry="110"/></clipPath>
+ <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<g id="aura" opacity=".55"><circle cx="200" cy="220" r="158" fill="none" stroke="#ffca57" stroke-width="2" stroke-dasharray="8 24"><animateTransform attributeName="transform" type="rotate" from="0 200 220" to="360 200 220" dur="22s" repeatCount="indefinite"/></circle></g>
+<g id="king-body"><animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.2s" repeatCount="indefinite"/>
+<path d="M72 417Q80 304 147 297L244 297Q322 305 330 417Z" fill="url(#armor)" stroke="#ffd27a" stroke-width="5"/>
+<path d="M129 336Q200 392 274 332" fill="none" stroke="url(#gold)" stroke-width="19"/>
+<path d="M132 356Q200 411 270 351" fill="none" stroke="#dfbd65" stroke-width="6"/>
+<ellipse cx="200" cy="188" rx="101" ry="114" fill="#2d1b13" stroke="url(#gold)" stroke-width="6"/>
+<g clip-path="url(#face)"><image href="dame_reference.jpg" x="-85" y="-112" width="565" height="753" preserveAspectRatio="xMidYMid slice"/></g>
+<path d="M102 112L115 35L147 74L176 10L204 63L235 8L263 73L298 34L309 111Z" fill="url(#gold)" stroke="#ffeab1" stroke-width="5"/>
+<path d="M102 112Q205 145 309 112" fill="none" stroke="#6e4210" stroke-width="13"/>
+<g fill="#171425" stroke="#fff0aa" stroke-width="5"><ellipse cx="147" cy="94" rx="11" ry="15"/><ellipse cx="201" cy="92" rx="14" ry="20"/><ellipse cx="259" cy="93" rx="11" ry="15"/></g>
+<path d="M188 358l12 -24 12 24 -12 27z" fill="#ffdf71" stroke="#ffe9a7" stroke-width="3"/>
+</g>
+<g id="stars" fill="#ffeb9c"><path d="M54 154l6 -17 6 17 18 6 -18 6 -6 18 -6 -18 -18 -6Z"><animate attributeName="opacity" values=".2;1;.2" dur="2s" repeatCount="indefinite"/></path><path d="M345 232l4 -13 5 13 14 4 -14 5 -5 13 -4 -13 -14 -5Z"><animate attributeName="opacity" values="1;.1;1" dur="1.7s" repeatCount="indefinite"/></path></g>
+</svg>
