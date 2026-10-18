@@ -58,11 +58,7 @@ function showSkPage(page){
   const home=document.getElementById('sk-home'), game=document.getElementById('legacy-game'),run=document.getElementById('street-run'),back=document.getElementById('sk-back');
   home.hidden=page!=='home';game.hidden=page==='home';run.hidden=true;back.hidden=page==='home';
   if(page==='rewards')loadBoard().catch(()=>{});
-  if(page==='store'){
-    home.hidden=false;game.hidden=true;back.hidden=false;
-    const old=document.getElementById('sk-store-placeholder');
-    if(!old){const div=document.createElement('section');div.id='sk-store-placeholder';div.style.cssText='padding:28px;text-align:center;color:#f7d57e';div.innerHTML='<h2>STREET KINGS STORE</h2><p>Store merchandise and memberships are coming soon.</p>';home.append(div)}
-  }else{const old=document.getElementById('sk-store-placeholder');if(old)old.remove()}
+  if(page==='store'){window.location.assign('/store.html');return;}else{const old=document.getElementById('sk-store-placeholder');if(old)old.remove()}
   const targets={rewards:'#leaderboard',account:'#username'};
   if(targets[page])requestAnimationFrame(()=>document.querySelector(targets[page])?.scrollIntoView({behavior:'smooth',block:'center'}));
   else window.scrollTo({top:0,behavior:'smooth'});
