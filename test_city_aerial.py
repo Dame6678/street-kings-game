@@ -36,12 +36,15 @@ def test_exact_nine_divisions_and_grounded_game_geojson():
     assert "type:'Polygon'" in s
     assert 'Fictional game location' in s
 
-def test_divisions_uses_real_aerial_iframe_and_keeps_challenge():
+def test_divisions_replaces_aerial_with_interactive_regions_and_keeps_challenge():
     s=(ROOT/'static/divisions.html').read_text()
-    assert 'src="/city.html?embedded=1"' in s
+    assert 'src="/city.html?embedded=1"' not in s
+    assert 'id="divisionZones"' in s
+    assert '/crown-plaza.html?district=0' in s
+    assert 'renderZones()' in s
     assert "'/api/divisions/challenge'" in s
-    assert 'streetkings:division-selected' in s
-    assert 'streetkings:select-division' in s
+    assert "'/api/divisions'" in s
+    assert 'ENTER KINGSLEY STREET' in s
     assert 'VIEW DIVISION' in s
     assert 'CURRENT KING' in s
 

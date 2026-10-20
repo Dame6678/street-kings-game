@@ -45,5 +45,5 @@ def test_crowns_and_match_integrity(monkeypatch):
         assert d['king']['username']=='defender' and d['version']==2
         assert len(d['history'])==2
         assert app.get('/divisions.html').status_code==200
-        assert 'CITY POWER MAP' in app.get('/divisions.html').text
+        assert 'NINE DIVISIONS</h1>' in app.get('/divisions.html').text
         assert "window.location.assign('/divisions.html')" in app.get('/index.html').text
